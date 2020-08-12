@@ -95,9 +95,12 @@ prius.moveCar();
   }
   
   Movie.prototype.changeRating = function(num) {
-    return 
+    return (this.rating + num) / 2
 
   }
+
+  const Warcraft = new Movie('Warcraft', 'action', 9)
+  
   
   ////////// PROBLEM 5 //////////
   
@@ -106,14 +109,15 @@ prius.moveCar();
   // Once the User constructor function is created, write a prototype method for the User function. Name this method addSavedPost. It should take in three parameters: id (a number), title (a string) and rating (a number). Use these parameters to create a new object and add it to the savedPosts array. Make sure to name the properties the same as described previously (id, title, rating).
   
   function User(name, age, email, savedPosts) {
-    this.name = '',
-    this.age = '',
-    this.email = '',
-    this.savedPosts = {
-      id: '',
-      title: '',
-      rating: '',
-    }
+    this.name =name;
+    this.age = age;
+    this.email = email;
+    this.savedPosts = savedPosts;
+  }
+
+  User.prototype.addSavedPost = function (id, title, rating) {
+    const newPost = {id:id, title:title, rating:rating,}
+    this.savedPosts.push(newPost)
   }
   
   ////////// PROBLEM 6 //////////
@@ -121,7 +125,9 @@ prius.moveCar();
   // You will be using the constructor function you just created in problem 5.
   // Write a prototype method for the User constructor function named removeSavedPost that will take in one number parameter representing the post id. Use this id to find and remove the matching object in the savedPosts array.
   
-  // Code here
+  User.prototype.removeSavedPost(postId) {
+
+  }
   
   ////////// PROBLEM 7 //////////
   
