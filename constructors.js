@@ -125,9 +125,9 @@ prius.moveCar();
   // You will be using the constructor function you just created in problem 5.
   // Write a prototype method for the User constructor function named removeSavedPost that will take in one number parameter representing the post id. Use this id to find and remove the matching object in the savedPosts array.
   
-  User.prototype.removeSavedPost(postId) {
+  // User.prototype.removeSavedPost(postId) {
 
-  }
+  // }
   
   ////////// PROBLEM 7 //////////
   
